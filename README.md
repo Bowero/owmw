@@ -1,6 +1,8 @@
 # OWMW: Open Weather Map Wrapper
 OWMW is an acronym for Open Weather Map Wrapper. With OWMW you can easily gather data about the weather in the area. All you need is a (free) token from [OWM](https://openweathermap.org/api).
 
+The project has been written in V, but Linguist does not yet support V because it is not popular enough. That is why the project is marked as Go.
+
 ## Installation
 To install OWMW, you can use [VPM](https://github.com/yue-best-practices/vpm).
 
