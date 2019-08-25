@@ -25,11 +25,11 @@ fn (w Weather) city(q string) CityData {
 }
 
 /* Coord Data */
-pub fn (c CityData) lon() f32 {
+pub fn (c CityData) longitude() f32 {
     return c.coord.lon
 }
 
-pub fn (c CityData) lat() f32 {
+pub fn (c CityData) latitude() f32 {
     return c.coord.lat
 }
 
@@ -51,7 +51,7 @@ pub fn (c CityData) icon() string {
 }
 
 /* Main Data */
-pub fn (c CityData) temp() f32 {
+pub fn (c CityData) temperature() f32 {
     return c.main.temp
 }
 
@@ -63,11 +63,11 @@ pub fn (c CityData) humidity() int {
     return c.main.humidity
 }
 
-pub fn (c CityData) temp_min() f32 {
+pub fn (c CityData) min_temperature() f32 {
     return c.main.temp_min
 }
 
-pub fn (c CityData) temp_max() f32 {
+pub fn (c CityData) max_temperature() f32 {
     return c.main.temp_max
 }
 
