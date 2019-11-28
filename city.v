@@ -3,13 +3,13 @@ module owmw
 import http
 
 pub fn (w Weather) city_by_name(q string) CityData {
-    url := '$BaseUrl/weather?q=$q&units=$w.metric&APPID=$w.token'
+    url := '$base_url/weather?q=$q&units=$w.metric&APPID=$w.token'
     response := w.city(url)
     return response
 }
 
 pub fn (w Weather) city_by_id(id int) CityData {
-    url := '$BaseUrl/weather?id=$id&units=$w.metric&APPID=$w.token'
+    url := '$base_url/weather?id=$id&units=$w.metric&APPID=$w.token'
     response := w.city(url)
     return response
 }
