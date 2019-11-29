@@ -20,7 +20,7 @@ const (
 )
 
 fn main() {
-    w := owmw.init(Token, 1)
+    w := owmw.start(Token, 1)
     city := w.city_by_name('Rotterdam')
     println(city.temperature())
 }
@@ -37,7 +37,7 @@ As you see, it is hot nowadays.
 To start, you will have to initialize the wrapper with your token:
 
 ```go
-w := owmw.init(Token, metric)
+w := owmw.start(Token, metric)
 ```
 
 If you prefer the imperial system, you pass `0` to `metric`. For metric systems you pass `1`.
