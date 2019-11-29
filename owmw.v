@@ -1,12 +1,10 @@
 module owmw
 
-import json
-
 const (
-    BaseUrl = 'https://api.openweathermap.org/data/2.5/'
+    base_url = 'https://api.openweathermap.org/data/2.5/'
 )
 
-pub fn init(token string, m int) Weather {
+pub fn start(token string, m int) Weather {
     mut metric := 'imperial'
     if (m == 1) {
         metric = 'metric'
