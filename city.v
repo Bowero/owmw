@@ -1,7 +1,7 @@
 module owmw
 
 import (
-    http
+    net.http
     json
 )
 
