@@ -49,7 +49,7 @@ city := owmw.city_by_name('Rotterdam')
 city := owmw.city_by_id(2747891)
 ```
 
-A least with the IDs can be found on [the website of Open Weather Map](http://bulk.openweathermap.org/sample/).
+A list with the IDs can be found on [the website of Open Weather Map](http://bulk.openweathermap.org/sample/).
 
 After selecting a city, you can gather data from it.
 
