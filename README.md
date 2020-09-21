@@ -14,10 +14,10 @@ Please note: Due to a bug, you will have to rename the folder to `bowero.riv`. S
 ```go
 module main
 
-import owmw
+import bowero.owmw
 
 const (
-    Token = 'TOKEN'
+    token = 'TOKEN'
 )
 
 fn main() {
