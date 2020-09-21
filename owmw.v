@@ -6,7 +6,7 @@ const (
 
 pub fn start(token string, m int) Weather {
     mut metric := 'imperial'
-    if (m == 1) {
+    if m == 1 {
         metric = 'metric'
     }
 

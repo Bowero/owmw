@@ -1,9 +1,7 @@
 module owmw
 
-import (
-    net.http
-    json
-)
+import net.http
+import json
 
 pub fn (w Weather) city_by_name(q string) CityData {
     url := '$base_url/weather?q=$q&units=$w.metric&APPID=$w.token'
