@@ -19,10 +19,11 @@ struct WeatherData {
 
 struct MainData {
     temp        f32
-    pressure    int
-    humidity    int
+    feels_like  f32
     temp_min    f32
     temp_max    f32
+    pressure    int
+    humidity    int
 }
 
 struct WindData {
@@ -42,7 +43,7 @@ struct SysData {
 
 struct CityData {
     coord       CoordData
-    weather     WeatherData
+    weather     []WeatherData
     base        string
     main        MainData
     visibility  int
