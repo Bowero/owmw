@@ -4,20 +4,20 @@ import net.http
 import json
 
 pub fn (w Weather) city_by_name(q string) CityData {
-    url := '$base_url/weather?q=$q&units=$w.metric&APPID=$w.token'
+    url := '$base_url/weather?q=$q&units=$w.metric&appid=$w.token'
     response := w.city(url)
     return response
 }
 
 pub fn (w Weather) city_by_id(id int) CityData {
-    url := '$base_url/weather?id=$id&units=$w.metric&APPID=$w.token'
+    url := '$base_url/weather?id=$id&units=$w.metric&appid=$w.token'
     response := w.city(url)
     return response
 }
 
 fn (w Weather) city(q string) CityData {
     response := http.get(q) or {
-        panic('Error getting Data: ' + err)
+        panic('Error getting Data: ' + err.msg)
     }
     citydata := json.decode(CityData, response.text) or {
         panic(err)
@@ -36,24 +36,28 @@ pub fn (c CityData) latitude() f32 {
 
 /* Weather Data */
 pub fn (c CityData) condition_id() int {
-    return c.weather.id
+    return c.weather[0].id
 }
 
 pub fn (c CityData) description() string {
-    return c.weather.main
+    return c.weather[0].main
 }
 
 pub fn (c CityData) description_long() string {
-    return c.weather.description
+    return c.weather[0].description
 }
 
 pub fn (c CityData) icon() string {
-    return c.weather.icon
+    return c.weather[0].icon
 }
 
 /* Main Data */
 pub fn (c CityData) temperature() f32 {
     return c.main.temp
+}
+
+pub fn (c CityData) feels_like() f32 {
+    return c.main.feels_like
 }
 
 pub fn (c CityData) pressure() int {
